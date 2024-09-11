@@ -3,11 +3,23 @@ document.getElementById('change').addEventListener('click', function() {
     let series = document.querySelectorAll('.series');
     let visibleIndex = Array.from(series).findIndex(serie => serie.classList.contains('visible'));
 
+
+    // Retirer la classe "visible" de la série actuelle
     series[visibleIndex].classList.remove('visible');
 
+    // Calculer l'index de la prochaine série
     let nextIndex = (visibleIndex + 1) % series.length;
 
+
+    // Ajouter la classe "visible" à la prochaine série
     series[nextIndex].classList.add('visible');
+
+    // Remettre à 1 la valeur de chaque <input> dans la nouvelle série visible
+    const inputs = series[nextIndex].querySelectorAll('.details input[type="number"]');
+
+    inputs.forEach(input => {
+        input.value = 1;
+    });
 });
 
 // Gestion du panier
