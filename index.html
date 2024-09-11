@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie de Produits</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery">
+        <h1>Galerie de Produits</h1>
+        <button id="change"> Switch </button>
+        <!-- Série 1 -->
+        <div class="series visible">
+            <h2>Série 1</h2>
+            <div class="product">
+                <img src="image1.jpg" alt="Produit 1">
+                <div class="details">
+                    <input type="number" value="1" min="1">
+                    <button class="add-to-cart" data-item="Roue de charette">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="image2.jpg" alt="Produit 2">
+                <div class="details">
+                    <input type="number" value="1" min="1">
+                    <button class="add-to-cart" data-item="Roue de voiture de sport">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Série 2 -->
+        <div class="series serie2">
+            <h2>Série 2</h2>
+            <div class="product">
+                <img src="image3.jpg" alt="Produit 3">
+                <div class="details">
+                    <input type="number" value="1" min="1">
+                    <button class="add-to-cart" data-item="Grande roue de charette">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="image4.jpg" alt="Produit 4">
+                <div class="details">
+                    <input type="number" value="1" min="1">
+                    <button class="add-to-cart" data-item="Roue de voiture de beauf">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Série 3 -->
+        <div class="series serie3">
+            <h2>Série 3</h2>
+            <div class="product">
+                <img src="image5.jpg" alt="Produit 5">
+                <div class="details">
+                    <input type="number" value="1" min="1">
+                    <button class="add-to-cart" data-item="Roue de train à vapeur">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="image6.jpg" alt="Produit 6">
+                <div class="details">
+                    <input type="number" value="1" min="1">
+                    <button class="add-to-cart" data-item="Roue trop stylée">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	    <div id="cartContainer">
+        <h2>Votre Panier</h2>
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantité</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Les lignes du panier seront ajoutées ici -->
+            </tbody>
+        </table>
+    </div>
+<script src="script.js"></script>
+
+</body>
+</html>
